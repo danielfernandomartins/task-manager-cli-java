@@ -1,0 +1,14 @@
+Estrutura Task Manager:
+
+TaskManager/
+├── src/
+│   └── main/
+│       └── java/
+│           └── br/
+│               └── com/
+│                   └── exemplo/
+│                       ├── Task.java
+│                       ├── TaskManager.java
+│                       └── Main.java
+├── .gitignore
+└── README.md
