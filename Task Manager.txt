@@ -1,124 +1,21 @@
 package br.com.exemplo;
 
-public class Task {
-    private String description;
-    private boolean completed;
-
-    public Task(String description) {
-        this.description = description;
-        this.completed = false;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public boolean isCompleted() {
-        return completed;
-    }
-
-    public void complete() {
-        this.completed = true;
-    }
-
-    @Override
-    public String toString() {
-        return (completed ? "[✔] " : "[ ] ") + description;
-    }
-}
-
-package br.com.exemplo;
-
-import java.util.ArrayList;
-import java.util.List;
-
-public class TaskManager {
-    private List<Task> tasks = new ArrayList<>();
-
-    public void addTask(String description) {
-        tasks.add(new Task(description));
-        System.out.println("✅ Tarefa adicionada com sucesso!");
-    }
-
-    public void listTasks() {
-        if (tasks.isEmpty()) {
-            System.out.println("⚠️ Nenhuma tarefa cadastrada.");
-            return;
-        }
-
-        System.out.println("\n=== Lista de Tarefas ===");
-        for (int i = 0; i < tasks.size(); i++) {
-            System.out.println((i + 1) + ". " + tasks.get(i));
-        }
-    }
-
-    public void completeTask(int index) {
-        if (index < 1 || index > tasks.size()) {
-            System.out.println("❌ Índice inválido.");
-            return;
-        }
-        tasks.get(index - 1).complete();
-        System.out.println("🎯 Tarefa concluída!");
-    }
-
-    public void removeTask(int index) {
-        if (index < 1 || index > tasks.size()) {
-            System.out.println("❌ Índice inválido.");
-            return;
-        }
-        tasks.remove(index - 1);
-        System.out.println("🗑️ Tarefa removida com sucesso!");
-    }
-package br.com.exemplo;
-
 import java.util.Scanner;
 
-public class Main {
+public class HelloGitHub {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        TaskManager manager = new TaskManager();
 
-        int option;
-        do {
-            System.out.println("\n=== Gerenciador de Tarefas ===");
-            System.out.println("1️⃣  Adicionar tarefa");
-            System.out.println("2️⃣  Listar tarefas");
-            System.out.println("3️⃣  Concluir tarefa");
-            System.out.println("4️⃣  Remover tarefa");
-            System.out.println("0️⃣  Sair");
-            System.out.print("Escolha uma opção: ");
-            option = scanner.nextInt();
-            scanner.nextLine(); // limpar buffer
+        System.out.println("=== Bem-vindo ao HelloGitHub! ===");
+        System.out.print("Digite seu nome: ");
+        String nome = scanner.nextLine();
 
-            switch (option) {
-                case 1:
-                    System.out.print("Digite a descrição da tarefa: ");
-                    String desc = scanner.nextLine();
-                    manager.addTask(desc);
-                    break;
-                case 2:
-                    manager.listTasks();
-                    break;
-                case 3:
-                    manager.listTasks();
-                    System.out.print("Digite o número da tarefa para concluir: ");
-                    int completeIndex = scanner.nextInt();
-                    manager.completeTask(completeIndex);
-                    break;
-                case 4:
-                    manager.listTasks();
-                    System.out.print("Digite o número da tarefa para remover: ");
-                    int removeIndex = scanner.nextInt();
-                    manager.removeTask(removeIndex);
-                    break;
-                case 0:
-                    System.out.println("👋 Saindo... até logo!");
-                    break;
-                default:
-                    System.out.println("❌ Opção inválida. Tente novamente.");
-            }
-        } while (option != 0);
+        System.out.println("Olá, " + nome + "! 👋");
+        System.out.println("Você acabou de rodar seu primeiro programa Java no GitHub!");
 
         scanner.close();
     }
 }
+
+
