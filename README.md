@@ -1,55 +1,34 @@
-# ✅ TaskManager
+# ✅ Task Manager CLI em Java
 
-Um pequeno **gerenciador de tarefas** em Java executado no terminal.  
-Ideal para praticar **lógica, POO (Programação Orientada a Objetos)** e **boas práticas** com **listas e classes**.
+Gerenciador de tarefas executado no terminal para praticar orientação a objetos e manipulação de coleções.
 
+## Funcionalidades
 
-## 🧠 Funcionalidades
-- Adicionar uma nova tarefa
-- Listar todas as tarefas
-- Marcar tarefa como concluída
+- Adicionar tarefa
+- Listar tarefas
+- Marcar como concluída
 - Remover tarefa
-- Sair do programa
 
+## Tecnologia
 
-## 🧩 Exemplo de uso
+**Java**
 
-=== Gerenciador de Tarefas ===
-1️⃣ Adicionar tarefa
-2️⃣ Listar tarefas
-3️⃣ Concluir tarefa
-4️⃣ Remover tarefa
-0️⃣ Sair
-Escolha uma opção: 1
-Digite a descrição da tarefa: Estudar Java
-✅ Tarefa adicionada com sucesso!
+## O que demonstra
 
+- Classes e objetos
+- Listas
+- Controle de estado
+- Métodos
+- Fluxo de menu
 
-## 🚀 Como executar
+## Como explicar em entrevista
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seuusuario/TaskManager.git
+> "Usei um gerenciador de tarefas para consolidar POO em Java. O foco foi modelar uma tarefa como objeto e controlar mudanças de estado, como criada, concluída e removida."
 
+## Próximo passo
 
-2. Compile os arquivos:
+Persistência, testes unitários e separação em camadas.
 
-javac src/main/java/br/com/exemplo/*.java
+## Autor
 
-
-3. Execute:
-
-java -cp src/main/java br.com.exemplo.Main
-
-
-🧰 Tecnologias
-
-Java 17+
-
-Git e GitHub
-
-
-🧑‍💻 Autor
-
-Daniel Fernando Martins
-🔗 GitHub
+**Daniel Fernando Martins**
